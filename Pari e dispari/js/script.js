@@ -5,10 +5,14 @@
 // Stabiliamo se la somma dei due numeri è pari o dispari (ovviamente  usando una funzione)
 // Dichiariamo chi ha vinto.
 
-btnEven = document.getElementById('pari');
-btnOdd = document.getElementById('dipari');
-chooseNumber = parseInt(document.getElementById('text').value);
+const btnEven = document.getElementById('pari');
+const btnOdd = document.getElementById('dipari');
 
+btnEven.addEventListener('click', function(){
+    const chooseNumber = parseInt(document.getElementById('numbers').value);
+    let number = chooseNumber;
+    console.log(number);
+})
 
 
 
