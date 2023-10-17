@@ -7,5 +7,10 @@ const btn = document.querySelector('button');
     
 btn.addEventListener('click', function(){
     const inputEl = document.getElementById('text').value;
-    console.log(inputEl)
+    let parola = inputEl;
+    let parolaInversa;
+    console.log(parola);
+    for (let i = parola.length - 1; i >= 0; i--) {
+        console.log(parola[i]);
+    } 
 })
