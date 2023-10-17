@@ -8,55 +8,31 @@
 const btnEven = document.getElementById('pari');
 const btnOdd = document.getElementById('dispari');
 
-btnEven.addEventListener('click', function(){
+btnEven.addEventListener('click', checkEven)
+
+btnOdd.addEventListener('click', checkOdd)
+
+function checkEven(){
     const chooseNum = parseInt(document.getElementById('numbers').value);
     let userNum = chooseNum;
     let computerNum = getRndInteger(1,5);
     let msg;
     let somma = userNum + computerNum;
-    if (somma % 2 === 0) {
-        msg = 'Hai vinto'
-    } else {
-        msg = 'Hai perso'
-    }
+    (somma % 2 === 0) ? msg = 'Hai vinto' : msg = 'Hai perso';
     console.log(userNum, computerNum, somma);
     console.log(msg);
-})
+}
 
-btnOdd.addEventListener('click', function(){
+function checkOdd(){
     const chooseNum = parseInt(document.getElementById('numbers').value);
     let userNum = chooseNum;
     let computerNum = getRndInteger(1,5);
     let msg;
     let somma = userNum + computerNum;
-    if (somma % 2 === 0) {
-        msg = 'Hai perso'
-    } else {
-        msg = 'Hai vinto'
-    }
+    (somma % 2 === 0) ? msg = 'Hai perso' : msg = 'Hai vinto';
     console.log(userNum, computerNum, somma);
     console.log(msg);
-})
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+}
 
 function getRndInteger(min, max) {
     return Math.floor(Math.random() * (max - min)) + min;
