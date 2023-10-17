@@ -6,7 +6,7 @@
 // Dichiariamo chi ha vinto.
 
 const btnEven = document.getElementById('pari');
-const btnOdd = document.getElementById('dipari');
+const btnOdd = document.getElementById('dispari');
 
 btnEven.addEventListener('click', function(){
     const chooseNum = parseInt(document.getElementById('numbers').value);
