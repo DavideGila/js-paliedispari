@@ -8,9 +8,18 @@ const btn = document.querySelector('button');
 btn.addEventListener('click', function(){
     const inputEl = document.getElementById('text').value;
     let parola = inputEl;
-    let parolaInversa;
+    let parolaInversa = '';
     console.log(parola);
     for (let i = parola.length - 1; i >= 0; i--) {
         console.log(parola[i]);
+        parolaInversa += parola[i]
     } 
+    console.log(parolaInversa);
+    let msg;
+    if (parola === parolaInversa) {
+        msg = 'Questa parola è palindroma'
+    } else {
+        msg = 'Questa parola non è palindroma'
+    }
+    console.log(msg);
 })
