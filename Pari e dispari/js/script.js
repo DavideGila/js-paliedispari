@@ -9,9 +9,18 @@ const btnEven = document.getElementById('pari');
 const btnOdd = document.getElementById('dipari');
 
 btnEven.addEventListener('click', function(){
-    const chooseNumber = parseInt(document.getElementById('numbers').value);
-    let number = chooseNumber;
-    console.log(number);
+    const chooseNum = parseInt(document.getElementById('numbers').value);
+    let userNum = chooseNum;
+    let computerNum = getRndInteger(1,5);
+    let msg;
+    let somma = userNum + computerNum;
+    if (somma % 2 === 0) {
+        msg = 'Hai vinto'
+    } else {
+        msg = 'Hai perso'
+    }
+    console.log(userNum, computerNum, somma);
+    console.log(msg);
 })
 
 
