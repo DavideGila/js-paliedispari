@@ -5,7 +5,9 @@ alert('Inserisci una parola!');
 
 const btn = document.querySelector('button');
     
-btn.addEventListener('click', function(){
+btn.addEventListener('click', palindroma);
+
+function palindroma(){
     const inputEl = document.getElementById('text').value;
     let parola = inputEl;
     let parolaInversa = '';
@@ -16,10 +18,6 @@ btn.addEventListener('click', function(){
     } 
     console.log(parolaInversa);
     let msg;
-    if (parola === parolaInversa) {
-        msg = 'Questa parola è palindroma'
-    } else {
-        msg = 'Questa parola non è palindroma'
-    }
+    (parola === parolaInversa) ? msg = 'Questa parola è palindroma' : msg = 'Questa parola non è palindroma';
     console.log(msg);
-})
+}
